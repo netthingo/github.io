@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+textarea{
+	width: 100%;
+	resize:vertical;
+	outline: none;
+}
+#body {
+	width: 50%;
+	margin: 0 auto;
+}
+input {
+	outline: none;
+}
+.btnBigger{
+	width: 25px;
+	height: 25px;
+}
+</style>
+</head>
+<body>
+
+<div id="body">
+<input type='file' onchange='HandleFiles(this.files)' />
+<br /><br />
+
+<button onclick='GetInfos()'>Get Infos</button>
+<br /><br />
+
+<textarea id="info" ></textarea>
+<br /><br />
+
+<table>
+<tr>
+	<td><label>Index</label></td>
+	<td><input id='Index' type='number' /></td>
+</tr>
+<tr>
+	<td><label>Byte</label></td>
+	<td><input id='Byte' type='number' max='255' min='0'/></td>
+</tr>
+<tr>
+	<td><label>Change</label></td>
+	<td><button class='btnBigger' onclick='Change()' /></td>
+</tr>
+<tr>
+	<td><label>Download</label></td>
+	<td><button class='btnBigger' onclick='Download()' /></td>
+</tr>
+</table>
+
+
+
+
+</div>
+<script src="resources/js/$.js"></script>
+<script src="resources/js/ByteEditor.js"></script>
+</body>
+</html>
