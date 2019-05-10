@@ -156,7 +156,7 @@ hr.highHR{
 	text-align: left;
 }
 
-.btn-edited:active{
+.btn-edited:focus{
 	outline: none;
 }
 
@@ -227,11 +227,11 @@ hr.highHR{
 	width: 2.2em;
 }
 
-.google:active span,.google:active img{
+.google:focus span,.google:focus img{
 	opacity: 0;
 }
 
-.google:active{
+.google:focus{
 	transition: 0.2s;
 	background-color: white;
 }
@@ -257,7 +257,7 @@ hr.highHR{
 	animation: none
 }
 
-.google:active:after{
+.google:focus:after{
 
 	opacity: 1;
 	transition: 0.5s;
