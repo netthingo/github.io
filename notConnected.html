@@ -23,6 +23,14 @@
                                 <div class="card-body">
                                     <div class="title blue"><span>Effettua il login</span></div>
                                     <div class="card-text">
+										<div class="card-text">
+										<div>
+											Certificato del Firewall: 
+											<div class="link">
+												<div id="download" onclick="location.href='cert.der'"><i class="fas fa-file-download"></i></div>
+											</div>
+										</div>
+										<div onclick="showPopUpDownloader()" id="mirror">Mirror</div>
                                         <button onclick="location.href='?dologin'" class="btn-edited primary google"><img src="g-logo.png"></img><span>Login</span></button> <br>
                                     </div>
                                 </div>
@@ -31,5 +39,6 @@
                         </div>
                 </div>
         </div>
+        <script src="DownloaderPopUp.js"></script>
     </body>
 </htmL>
