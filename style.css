@@ -266,7 +266,7 @@ hr.highHR{
 }
 
 .google::before{
-	transform: translate(-50%, 0.15em);
+	transform: translate(-50%, 0.17em);
 	z-index: 2;
 	width: 1.8em;
 	height: 1.8em;
