@@ -244,18 +244,15 @@ hr.highHR{
 
 .google::after, .google::before{
 
-	display: flex;
-	flex-direction: column;
-	
+	pointer-events: none;
+
 	position: absolute;
 	left:50%;
-	width: 3em;
 
 	text-align: right;
 	
 	content: ' ';
 	background: transparent;
-	height: 3em;
 
 	border-radius: 50%;
 	
@@ -263,42 +260,37 @@ hr.highHR{
 	animation: none
 }
 
+.google::after{
+	width: 3em;
+	height: 3em;
+}
+
 .google::before{
+	transform: translate(-50%, 0.15em);
+	z-index: 2;
 	width: 1.8em;
 	height: 1.8em;
 }
 
-.google:focus::after{
+.google:focus::after, .google:focus::before{
+	display: flex;
+	flex-direction: column;
 
 	opacity: 1;
 	transition: 0.5s;
 	border: 2px solid white;
 	content: ' ';
-	background: linear-gradient(to right, #e35b55 25%, #409dd2 25%, #409dd2 50%, #40ad6f 50%, #40ad6f 75%, #fad240 75%, #fad240 100%);
-	background: linear-gradient(to right, #da241d 20%, #e35b55 20%, #e35b55 22%, #007cc3 22%, #007cc3 49%, #409dd2 49%, #409dd2 51%, #00923f 51%, #00923f 78%, #40ad6f 78%, #40ad6f 80%, #f8c300 80%, #f8c300 100%);
-
-	animation: loading 2s infinite;
 
 	box-shadow: 0px 0px 0px 0.2em rgba(0,0,0,0.25);
 }
 
 .google:focus::before{
-
-	z-index: 2;
-
-	opacity: 1;
-	transition: 0.5s;
-	border: 2px solid white;
-	text-align: center;
-	content: ' ';
 	background: white;
+}
 
-	animation: loadingCircle 2s infinite;
-
-	box-shadow: 0px 0px 0px 0.2em rgba(0,0,0,0.25);
-	
-	width: 1.8em;
-	height: 1.8em;
+.google:focus::after{
+	animation: loading 2s infinite;
+	background: linear-gradient(to right, #da241d 20%, #e35b55 20%, #e35b55 22%, #007cc3 22%, #007cc3 49%, #409dd2 49%, #409dd2 51%, #00923f 51%, #00923f 78%, #40ad6f 78%, #40ad6f 80%, #f8c300 80%, #f8c300 100%);
 }
 
 /* OTHER  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -306,13 +298,13 @@ hr.highHR{
 /* Medium devices (tablets, 768px and up) */
 @media(max-width: 991.98px) { 
 	.container{ max-width: 9999px;}
-	body{ font-size: 3em; } 
+	body, html #MODAL table{ font-size: 3em; } 
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	.container{ width: fit-content; min-width: 500px; }
-	body{ font-size: 1.1em; } 
+	body, html #MODAL table{ font-size: 1.1em; } 
 }
 
 /* ANIMATION  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -362,11 +354,6 @@ hr.highHR{
 @keyframes loading { 
     0%{transform: translate(-50%, -2.6em)  rotate(720deg);}
 	100%{transform: translate(-50%, -2.6em)  rotate(0deg);}
-}
-
-@keyframes loadingCircle { 
-    0%{transform: translate(-50%, 0.145em)  rotate(360deg);}
-	100%{transform: translate(-50%, 0.145em)  rotate(0deg);}
 }
 
 /* TABLE  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -430,8 +417,8 @@ hr.highHR{
 	font-size: 150%;
 	cursor: pointer;
 	transition: 0.25s;
-	padding-top: 6px;
-	margin-bottom: 2px;
+	padding: 6px;
+	padding-top: 10px;
 	border-radius: 5px;
 }
 
@@ -484,6 +471,84 @@ hr.highHR{
 	box-shadow: -0em -0em 0px 0.1em #c0def0;
 	transition: 0.2s;
 	color: #007cc3;
+}
+
+#popup{
+	text-align: right;
+}
+
+#popup span{
+	color: #d2d2d2;
+	cursor: pointer;
+}
+
+#popup:hover span{
+	transition: 0.2s;
+	color: #409dd2;
+}
+
+/* MODAL =----------------------------------------------------------------------------------------- */
+
+#MODAL{
+
+	display: none;
+
+	z-index: 2;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -75%);
+	border-radius: 1em;
+	padding: 2.5em;
+
+	background-color: white;
+	border: 1px solid #dadada;
+}
+
+#MODAL .head th{
+	font-weight: bold;
+	text-align: center;
+}
+
+#MODAL table{
+		width: 100%;
+		background-color: white;
+}
+
+#MODAL td, #MODAL th{
+	padding: 0.3em;
+	border: 1px solid #dadada;
+}
+
+#MODAL th{
+	font-size: 2em;
+}
+
+#SCREEN{
+	display: none;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+
+@keyframes up {
+	from {
+		top: 55%;
+		opacity: 0
+	}
+	to {
+		top: 50%;
+		opacity: 1
+	}
+}
+
+.up{
+	animation-name: up;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0, .01, 0, .99);
 }
 
 /*
