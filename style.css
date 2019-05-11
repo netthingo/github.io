@@ -73,13 +73,13 @@ hr.highHR{
 	box-shadow: 0px 3px 5px -5px rgba(173,173,173,1);
 }
 
-.card:before {
+.card::before {
 	background: linear-gradient(to right, #e35b55 18%, #409dd2 18%, #409dd2 50%, #40ad6f 50%, #40ad6f 82%, #fad240 82%, #fad240 100%);
 	content: ' ';
 	height: 0.5em;
 }
 
-.card-red:before {
+.card-red::before {
 	background:#e35b55;
 	content: ' ';
 	height: 0.5em;
@@ -144,6 +144,12 @@ hr.highHR{
 	border-bottom: 1px solid #c0e4cf;
 	box-shadow: 0px 3px 5px -5px #40ad6f;
 	color: #40ad6f;
+}
+
+.yellow{
+	border-bottom: 1px solid #fef0c0;
+	box-shadow: 0px 3px 5px -5px #fad240;
+	color: #fad240;
 }
 
 /* BUTTON  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -236,7 +242,7 @@ hr.highHR{
 	background-color: white;
 }
 
-.google:after{
+.google::after, .google::before{
 
 	display: flex;
 	flex-direction: column;
@@ -257,7 +263,12 @@ hr.highHR{
 	animation: none
 }
 
-.google:focus:after{
+.google::before{
+	width: 1.8em;
+	height: 1.8em;
+}
+
+.google:focus::after{
 
 	opacity: 1;
 	transition: 0.5s;
@@ -269,6 +280,25 @@ hr.highHR{
 	animation: loading 2s infinite;
 
 	box-shadow: 0px 0px 0px 0.2em rgba(0,0,0,0.25);
+}
+
+.google:focus::before{
+
+	z-index: 2;
+
+	opacity: 1;
+	transition: 0.5s;
+	border: 2px solid white;
+	text-align: center;
+	content: ' ';
+	background: white;
+
+	animation: loadingCircle 2s infinite;
+
+	box-shadow: 0px 0px 0px 0.2em rgba(0,0,0,0.25);
+	
+	width: 1.8em;
+	height: 1.8em;
 }
 
 /* OTHER  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -330,8 +360,13 @@ hr.highHR{
 	
 
 @keyframes loading { 
-    0%{transform: translate(-50%, -2.6em)  rotate(360deg);}
+    0%{transform: translate(-50%, -2.6em)  rotate(720deg);}
 	100%{transform: translate(-50%, -2.6em)  rotate(0deg);}
+}
+
+@keyframes loadingCircle { 
+    0%{transform: translate(-50%, 0.145em)  rotate(360deg);}
+	100%{transform: translate(-50%, 0.145em)  rotate(0deg);}
 }
 
 /* TABLE  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -406,76 +441,75 @@ hr.highHR{
 
 /* MODAL  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-@keyframes up {
-	from {
-		top: 350px;
-		opacity: 0
-	}
-	to {
-		top: 50%;
-		opacity: 1
-	}
+.DownloadArea{
+	text-align: center;
 }
 
-#mirror {
-	color: #9a9a9a;
-	cursor: pointer;
-	border-bottom: 1px solid white;
+.DownloadArea table{
+	width: 100%;
+}
+
+.DownloadArea table th{
 	text-align: right;
-	width: 100%;
-	transition: 0.25s;
 }
 
-#mirror:hover {
-	transition: 0.25s;
-	color: #89bcef;
-	;
+.DownloadArea table td{
+	text-align: left;
 }
 
-#Modal {
+.DownloadArea .text{
+	font-size: 1em;
+	color: #007cc3;
+}
+
+.DownloadArea #Download{
+
+	box-shadow: 0em 0em 0px 0.05em #c0def0;
+	color: #409dd2;
+	padding-top: 0.45em;
 	text-align: center;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	padding: 25px;
+	font-size: 2em;
+	width: 2em;
+	height: 2em;
 	border: 1px solid #dadada;
-	border-radius: 6px;
-	transform: translate(-50%, -50%);
-	background-color: white;
-	transition: 0.25s;
-	animation-name: up;
-	animation-duration: 0.5s;
-	animation-timing-function: cubic-bezier(0, .01, 0, .99);
-}
-
-#Modal table {
-	width: 100%;
-	color: #9a9a9a;
-	border-radius: 6px;
-	border: 1px solid #dadada;
-	margin-top: 10px;
-	padding: 5px;
-}
-
-#Modal table th {
-	transform: rotate(-15deg);
-	text-align: center;
-	font-size: 150%;
-	padding-left: 5px;
-	text-decoration: none;
-	transition: 0.25s;
+	border-radius: 0.5em;
 	cursor: pointer;
-	color: #89bcef;
-	font-size: 300%;
-	padding: 5px 45px;
+	background-color: white;
+	transition: 0.2s;
+	margin: 0 auto;
+
 }
 
-#Modal table td {
-	border-top: 1px solid #dadada;
+.DownloadArea #Download:hover{
+	box-shadow: -0em -0em 0px 0.1em #c0def0;
+	transition: 0.2s;
+	color: #007cc3;
 }
 
-#Modal table th:hover {
-	transition: 0.25s;
-	transform: rotate(0deg);
-}
+/*
 
+main palette: opacity: 1
+	background: linear-gradient(to right, #da241d 25%, #007cc3 25%, #007cc3 50%, #00923f 50%, #00923f 75%, #f8c300 75%, #f8c300 100%);
+
+#da241d     //red
+#007cc3     //blue
+#00923f     //green
+#f8c300     //yellow
+
+medium-soft pallette: opacity: 0.75
+	background: linear-gradient(to right, #e35b55 25%, #409dd2 25%, #409dd2 50%, #40ad6f 50%, #40ad6f 75%, #fad240 75%, #fad240 100%);
+
+#e35b55     //red
+#409dd2     //blue
+#40ad6f     //green
+#fad240     //yellow
+
+soft pallette: opacity: 0.25
+	background: ---
+
+#f6c9c7     //red
+#c0def0     //blue
+#c0e4cf     //green
+#fef0c0     //yellow
+
+*/
