@@ -5,6 +5,7 @@ var html = document.querySelectorAll("HTML")[0];
 var text = document.querySelectorAll(".OS");
 var modal = document.getElementById("MODAL");
 var screen = document.getElementById("SCREEN");
+var x = document.getElementById("MODAL_CLOSE");
 
 text.forEach(function(x) {
   x.append( document.createTextNode(getOS()) );
@@ -61,3 +62,5 @@ function ModalClose(){
     modal.remove();
     screen.remove();
 }
+
+x.onclick = closeModal;
