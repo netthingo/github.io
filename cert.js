@@ -2,11 +2,13 @@ var link = document.getElementById("Download");
 var popup = document.getElementById("popup");
 var body = document.querySelectorAll("BODY")[0];
 var html = document.querySelectorAll("HTML")[0];
-var text = document.getElementById("OS");
+var text = document.querySelectorAll(".OS");
 var modal = document.getElementById("MODAL");
 var screen = document.getElementById("SCREEN");
 
-text.append( document.createTextNode("[" + getOS() + "]") );
+text.forEach(function(x) {
+  x.append( document.createTextNode(getOS()) );
+});
 
 switch(getOS()){
     case "Windows":
