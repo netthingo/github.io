@@ -303,7 +303,13 @@ hr.highHR{
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-	.container{ width: fit-content; min-width: 500px; }
+	.container{ 
+		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+		width: -moz-max-content;    /* Firefox/Gecko */
+		width: -webkit-max-content; /* Chrome */
+		width: fit-content;
+		min-width: 500px; 
+	}
 	body, html #MODAL table{ font-size: 1.1em; } 
 }
 
