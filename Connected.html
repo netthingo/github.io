@@ -2,6 +2,7 @@
     <head>
 
         <!--[Other]-->
+		<script src="$.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -28,57 +29,15 @@
                                     <hr class="extraSmallHR">
                                     <div id="toggle"><i class="fas fa-chevron-down"></i></div>
                                     <div class="card-table">
+										<!--[Questa parte qua sotto è stata editata con script.js]-->
                                         <div class="tableInfo" id="tableInfo">
-                                            <table>
                                                 
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-user"></i>Nome: </th>
-                                                    <td>Studente Meucci</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                    <th><i class="far fa-envelope"></i>Email: </th>
-                                                    <td>studente.meucci@itismeucci.com</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                        <th><i class="fas fa-signal"></i>IP: </th>
-                                                        <td>10.101.96.24</td>
-                                                </tr>
-
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-network-wired"></i>Connesso alla rete: </th>
-                                                    <td>Rete Cablata</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-users"></i>Gruppo di appartenenza: </th>
-                                                    <td>Studenti</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-calendar-alt"></i>Connesso il:</th>
-                                                    <td> 14/04/2019 09:54:25</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-file-download"></i>Dati ricevuti:</th>
-                                                    <td>32.3 MB</td>
-                                                </tr>
-                                    
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-file-upload"></i>Dati inviati: </th>
-                                                    <td>123.2 kB</td>
-                                                </tr>
-                                                <tr class="connection-status-element">
-                                                    <th><i class="fas fa-tachometer-alt"></i></i>Velocit&agrave; media Download:</th>
-                                                    <td>1.21 KB/sec</td>
-                                                </tr>
-							                    <tr class="connection-status-element">
-                                                    <th><i class="fas fa-tachometer-alt"></i></i>Velocit&agrave; media Upload:</th>
-                                                    <td>400.88 B/sec</td>
-                                                </tr>
-                                            </table>
+											
+											<!--[INFO_START]-->
+											<div class="alert alert-info">
+												<strong><!--[INFOTEXT_START]--><p>IP: 172.16.5.217</p><p>E-Mail: nettenbreije.alexander@itismeucci.com</p><p>Nome: Alexander Nettenbreijers</p><p>Connesso alla rete: Rete Cablata</p><p>Gruppo di appartenenza: Studenti</p><p>Connesso il : 15/05/2019 08:14:42</p><p>Dati Ricevuti : 1.98 MB</p><p>Dati Inviati : 344.98 KB</p><p>Velocità media Download : 13.2 KB/sec</p><p>Velocità media Upload : 1.35 KB/sec</p><p></p><!--[INFOTEXT_END]--></strong>
+											</div>
+											<!--[INFO_END]-->
                                         </div>
                                     </div>
                                 </div>
@@ -89,6 +48,7 @@
         </div>
 		<img class="logo-background" src="logomeucci.png" alt="logo"></img>
 		
+		<script src="script.js"></script>
         <script src="TableToggle.js"></script>
     </body>
 </htmL>

@@ -236,7 +236,7 @@ hr.highHR{
 
 .google img{
 	transform: rotate(360deg);
-	transition: 1s;
+	transition: 0.5s;
 	background-color: white;
 	border-radius: 50%;
 	padding: 0.1em;
@@ -307,7 +307,7 @@ hr.highHR{
 /* OTHER  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Medium devices (tablets, 768px and up) */
-@media(max-width: 991.98px) { 
+@media(max-width: 768px) { 
 	.container{ max-width: 9999px;}
 	body, html #MODAL table{ font-size: 3em; } 
 }
@@ -391,6 +391,10 @@ hr.highHR{
 	padding-right: 0.5em;
 }
 
+#tableInfo{
+	display: none;
+}
+
 .tableInfo{
 	overflow: auto;
 	padding: 1em;
@@ -409,12 +413,12 @@ hr.highHR{
 	padding-left: 0.5em;
 }
 
-.tableInfo table i{
+.tableInfo table tr i{
 	opacity: 0.5;
 	padding-right: 0.25em;
 }
 
-.tableInfo table th {
+.tableInfo table tr td:nth-child(1) {
 	color: #40ad6f;
 	text-align: right;
 	padding: 0.5em;

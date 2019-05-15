@@ -30,6 +30,7 @@ async function close() {
 	}
 	
 	toggle.onclick = open;
+	
 }
 
 async function open() {
@@ -37,7 +38,7 @@ async function open() {
 	deg -= 180;
 	
 	toggler[0].style.transform = "rotate("+ deg +"deg)";
-	for(var i = RowAmmountClosed; i < trs.length; i++){
+	for(var i = RowAmmountClosed; i < trs.length-1; i++){
 		trs[i].style.display = "table-row";
   await sleep(sleepTime);
 	}
@@ -48,3 +49,5 @@ async function open() {
 
 toggle.onclick =  close;
 close();
+	
+div.style.display = "block";
