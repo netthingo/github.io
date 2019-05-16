@@ -1,0 +1,49 @@
+=Done?=[x]======================================================================================================================================================= TITLE
+
+<!--[TITLE_START]-->
+<h2 class="form-signin-heading"><!--[TITLETEXT_START]-->Effettua il login<!--[TITLETEXT_END]--></h2>
+<!--[TITLE_END]-->
+
+=Done?=[ ]======================================================================================================================================================= GREEN MSG
+
+<!--[SUCCESS_START]-->
+<div class="alert alert-success centered">
+<strong><!--[SUCCESSTEXT_START]-->LOGIN EFFETTUATO CON SUCCESSO<!--[SUCCESSTEXT_END]--></strong>
+</div>
+<!--[SUCCESS_END]-->
+
+=Done?=[ ]======================================================================================================================================================= RED MSG
+
+<!--[FAIL_START]-->
+<div class="alert alert-danger centered">
+<strong><!--[FAILTEXT_START]-->USERNAME O PASSWORD ERRATI<!--[FAILTEXT_END]--></strong>
+</div>
+<!--[FAIL_END]-->
+
+=Done?=[x]======================================================================================================================================================= TABLE
+
+<!--[INFO_START]-->
+<div class="alert alert-info">
+<strong><!--[INFOTEXT_START]--><pre>IP: 10.101.96.24
+E-Mail: studente.meucci@itismeucci.com
+Nome: studente meucci
+Connesso il : 09/02/2018 09:54:25
+</pre><!--[INFOTEXT_END]--></strong>
+</div>
+ <!--[INFO_END]-->
+						
+=Done?=[ ]======================================================================================================================================================= LOGIN
+
+<!--[LOGINBTN_START]-->
+<div class="login-wrap">
+<a class="btn-a btn-lg btn-login btn-block" href="?dologin">Accedi</a>
+</div>
+<!--[LOGINBTN_END]-->
+						
+=Done?=[ ]======================================================================================================================================================= LOGOUT	
+						
+<!--[LOGOUTBTN_START]-->
+<div class="login-wrap">
+<a class="btn-a btn-lg btn-login btn-block" href="?dologout">Disconnetti</a>
+</div>
+<!--[LOGOUTBTN_END]-->
