@@ -1,67 +1,121 @@
-<!DOCTYPE html>
-<html>
+<htmL>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <title>Firebird </title>  
-        <link href="style.css" rel="stylesheet">
 
+        <!--[Other]-->
+		<script src="$.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--[==+==]-->
+
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <title>Index</title>
     </head>
     <body>
-        <div id="container">
-            <div id="main">  
-                <div class="quartw logoimg">
-                    <img class="logoimg" src="logomeucci.png" alt="ITIS Meucci">
-                </div>   
-                <div class="halfw">
-                    <form class="form-signin" action="oauth2callback.php" method="POST">
-                        <input type="hidden" name="page" value="login">
-                        <input type="hidden" name="dologin" value="1">
-                        <!--[TITLE_START]-->
-                        <h2 class="form-signin-heading"><!--[TITLETEXT_START]-->Effettua il login<!--[TITLETEXT_END]--></h2>
-                        <!--[TITLE_END]-->
-                        <!--[SUCCESS_START]-->
-                        <div class="alert alert-success centered">
-                            <strong><!--[SUCCESSTEXT_START]-->LOGIN EFFETTUATO CON SUCCESSO<!--[SUCCESSTEXT_END]--></strong>
+	
+        <hr class="highHR">
+        <div class="container">
+                <div class="row">
+                        <div class="col-md">
+                            <hr class="mediumHR">
+                            <div class="card">
+                                <img class="card-logo" alt="logo" src="logomeucci.png"></img>
+                                <hr class="highHR">
+                                <div class="card-body">
+								
+									<div id="TITLE" class="AREA">
+                                    <!--[TITLE_START]-->
+									<h2 class="form-signin-heading"><!--[TITLETEXT_START]-->EFFETTUA IL LOGIN<!--[TITLETEXT_END]--></h2>
+									<!--[TITLE_END]-->
+									</div>
+									
+									<hr class="evenSmallerHR">
+									
+									<div id="SUCCESS" class="AREA">
+									<!--[SUCCESS_START]-->
+									<div class="alert alert-success centered">
+										<strong><!--[SUCCESSTEXT_START]-->LOGIN EFFETTUATO CON SUCCESSO<!--[SUCCESSTEXT_END]--></strong>
+									</div>
+									<!--[SUCCESS_END]-->
+									</div>
+									
+									<div id="FAIL" class="AREA">
+									<!--[FAIL_START]-->
+									<div class="alert alert-danger centered">
+										<strong><!--[FAILTEXT_START]-->USERNAME O PASSWORD ERRATI<!--[FAILTEXT_END]--></strong>
+									</div>
+									<!--[FAIL_END]-->
+									</div>
+									
+									<hr class="evenSmallerHR">
+									
+									<div id="LOGINBTN" class="AREA">
+									<!--[LOGINBTN_START]-->
+									<div class="login-wrap">
+										<a class="btn-a btn-lg btn-login btn-block" href="?dologin">Accedi</a>
+									</div>
+									<!--[LOGINBTN_END]-->
+									</div>
+									
+									<div id="LOGOUTBTN" class="AREA">
+									<!--[LOGOUTBTN_START]-->
+									<div class="login-wrap">
+										<a class="btn-a btn-lg btn-login btn-block" href="?dologout">Disconnetti</a>
+									</div>
+									<!--[LOGOUTBTN_END]-->
+									</div>
+									
+									<div id="INFO" class="AREA">
+									<!--[INFO_START]-->
+									<!--[INFO_END]-->
+                                    </div>
+									
+									<div id="CERT" class="AREA">
+									<div class="DownloadArea">
+                                        <div id="Download" onclick="alert('Error')"><i class="fas fa-download"></i></div> 
+                                        <div class="text"><span >Certificato per </span> <span class="OS"></span> </div>
+										<hr class="extraSmallHR">
+                                        <div id="popup"><span>Non hai <span class="OS"></span>?</span></div>
+                                    </div>
+									</div>
+									
+                                </div>
+                            </div>
+                            <hr class="extraSmallHR">
                         </div>
-                        <!--[SUCCESS_END]-->
-                        <!--[FAIL_START]-->
-                        <div class="alert alert-danger centered">
-                            <strong><!--[FAILTEXT_START]-->USERNAME O PASSWORD ERRATI<!--[FAILTEXT_END]--></strong>
-                        </div>
-                        <!--[FAIL_END]-->
-                        
-                        <!--[INFO_START]-->
-                        <div class="alert alert-info">
-                            <strong><!--[INFOTEXT_START]--><pre>IP: 10.101.96.24
-E-Mail: studente.meucci@itismeucci.com
-Nome: studente meucci
-Connesso il : 09/02/2018 09:54:25
-</pre><!--[INFOTEXT_END]--></strong>
-                        </div>
-                        <!--[INFO_END]-->
-                        
-                        <div class="alert alert-info">
-                        Se non hai ancora installato il certificato del Firewall, premi <a href="cert.der"/>Quì</a> per scaricarlo ed installarlo.<br>Per Android, premi <a href="cert.pem"/>Quì</a> per scaricarlo.
-                        </div>
-                        
-                        <!--[LOGINBTN_START]-->
-                        <div class="login-wrap">
-                            <a class="btn-a btn-lg btn-login btn-block" href="?dologin">Accedi</a>
-                        </div>
-                        <!--[LOGINBTN_END]-->
-                        <!--[LOGOUTBTN_START]-->
-                        <div class="login-wrap">
-                            <a class="btn-a btn-lg btn-login btn-block" href="?dologout">Disconnetti</a>
-                        </div>
-                        <!--[LOGOUTBTN_END]-->
-                    </form>
-                </div>  
-                <div class="quartw logoimg">
-                    <img  src="logomeucci.png" alt="ITIS Meucci">
                 </div>
-            </div>
         </div>
+		
+		<div id="OBJECTS">
+		<div id="EDITED-LOGIN-BTN">
+			<button class="btn-edited primary google"><img src="g-logo.png"></img><span>Login</span></button>
+		</div>
+		<div id="EDITED-LOGOUT-BTN">
+			<button  class="btn-edited success google"><img src="g-logo.png"></img><span>Logout</span></button>
+		</div>
+		<div id="TOGGLE-BTN">
+			<div id="toggle"><i class="fas fa-chevron-down"></i></div>
+		</div>
+		</div>
+		
+		<div id="SCREEN"></div>
+        <div id="MODAL">
+            <div id="MODAL_CLOSE"><i class="fas fa-times"></i></div>
+            <table>
+                    <tr class="head"><th></th><th>File name</th><th>OS</th></tr>
+                    <tr><th> <a href="cert.der"><i class="fas fa-download"></i></a></th><td>cert.der</td><td>windows </td></tr>
+                    <tr><th> <a href="cert.pem"><i class="fas fa-download"></i></a></th><td>cert.pem</td><td>andorid </td></tr>
+            </table>
+        </div>
+		
+		<img class="logo-background" src="logomeucci.png" alt="logo"></img>
+		
+		<script src="script.js"></script>
+        <script src="TableToggle.js"></script>
+		<script src="getOS.js"></script>
+        <script src="cert.js"></script>
     </body>
-</html>
+</htmL>
+
