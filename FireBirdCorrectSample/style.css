@@ -358,13 +358,13 @@ hr.highHR{
 	}
 }
 
-.alert{
+.alertExclamation{
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 
-.alert i{
+.alertExclamation i{
 	position: relative;
 	left:50%;
 	color: #e35b55;
@@ -473,31 +473,20 @@ hr.highHR{
 .DownloadArea .text{
 	font-size: 1em;
 	color: #007cc3;
-
 }
 
 .DownloadArea #Download{
 
-	box-shadow: 0em 0em 0px 0.05em #c0def0;
-	color: #409dd2;
-	padding-top: 0.45em;
-	text-align: center;
 	font-size: 2em;
-	width: 2em;
-	height: 2em;
-	border: 1px solid #dadada;
-	border-radius: 0.5em;
+	color: #409dd2;
 	cursor: pointer;
-	background-color: white;
+	transform: scale(1,1);
 	transition: 0.2s;
-	margin: 0.2em auto;
 
 }
-
 .DownloadArea #Download:hover{
-	box-shadow: -0em -0em 0px 0.1em #c0def0;
+	transform: scale(1.1,1.1);
 	transition: 0.2s;
-	color: #007cc3;
 }
 
 #popup{
@@ -607,23 +596,35 @@ hr.highHR{
 
 
 .alert{
-	margin: 0.2em auto;
-		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-		width: -moz-max-content;    /* Firefox/Gecko */
-		width: -webkit-max-content; /* Chrome */
-		width: fit-content;
+	margin: 0;
+	width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+	width: -moz-max-content;    /* Firefox/Gecko */
+	width: -webkit-max-content; /* Chrome */
+	width: fit-content;
 	padding: 0.2em;
+	padding-right: 1em;
+	margin-left: 2em;
 	color: white;
+	border-radius: 0;
+	border: 0;
+}
+
+.alert::before{
+	position: relative;
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+	left: -1.5em;
 }
 
 .alert-success{
-	border: 1px solid #00923f;
-	background-color: #40ad6f;
+	color: #40ad6f;
+	border-left: 1px dashed #00923f;
+	background-color: rgba(191, 227, 206, 0.25);
 }
 
 .alert-danger{
-	border: 1px solid #da241d;
-	background-color: #e35b55;
+	color: #e35b55;
+	border-left: 1px dashed #da241d;
+	background-color: rgba(246, 200, 198, 0.25);
 }
 
 /*

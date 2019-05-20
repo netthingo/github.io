@@ -34,6 +34,7 @@ switch(textTitle){
 	$("#TITLE div").addClass("green");
 	$("#TITLE div span").text("Connesso");
 	connected = true;
+	break;
 	case "ACCESSO NEGATO":
 	$("#TITLE div").addClass("red");
 	$("#TITLE div span").text("Accesso Negato");
