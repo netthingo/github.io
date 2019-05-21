@@ -4,6 +4,7 @@
 ////█			♥♥♥♥			█////
 ////█							█////
 
+
 /*
 ────────────────────────────────────────────────────────────┤♦│
 ████████████████████████████████████████████████████████████│!│-TITLE-
@@ -140,9 +141,10 @@ La gestione del toggle è in "tableToggle.js"
 try {
 
 var str = document.querySelectorAll("#INFO")[0].innerHTML;
-str = str.split('<!--[INFOTEXT_START]-->').pop().split('<!--[INFOTEXT_END]-->')[0];
+str = str.split('<!--[INFO_START]-->').pop().split('<!--[INFO_END]-->')[0];
 
 if(str != ""){
+	str = str.split('<!--[INFOTEXT_START]-->').pop().split('<!--[INFOTEXT_END]-->')[0];
 	// toggle thing
 	$("#INFO").before($("#toggle-obj"));
 	
@@ -167,7 +169,7 @@ if(str != ""){
 	var i = 0;
 	var table = "<table>";
 	camps.forEach(function (el) {
-		el = "<tr><td><i class='" + list[i] + "'></i></td><td>" + el + "</td></tr>";
+		el = "<tr><td><i class='" + list[i] + "'></i>" + el + "</td></tr>";
 		el = el.replace(":","</td><td>");
 		i++;
 		table += el;
@@ -206,3 +208,9 @@ $("#DENIED").html("");
 $("#DENIED").append($(table));
 
 } catch(ex) {}
+
+
+
+
+
+$("html").fadeIn();

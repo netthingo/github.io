@@ -560,6 +560,7 @@ hr.highHR{
 #MODAL_CLOSE{
 	transform: translate(-100%, -0%);
 	position: absolute;
+	position: absolute;
 	left: 100%;
 	top: 0%;
 	transition: 0.2s;
