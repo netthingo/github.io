@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+	<!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autori" content="Andrea Delli, Alexander Nettenbreijers">
+    <meta name="data" content="maggio 2019">
+    <meta name="descrizione" content="Logged - Firebird">
+    <meta name="keywords" content="HTML, firewall, logged, login, homepage, info, connessione">
+
+	<!-- REFERENCES -->
+    <link rel="shortcut icon" href="./resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- HEAD -->
+	<title>Firebird</title>
+	
+</head>
+
+<body>
+
+	<hr class="sep six">
+	
+    <div class="card">
+        <img src="resources/logo.png" id="logo" alt="Logo ITIS Meucci">
+			
+		<hr class="sep three">
+			
+		<div class="card-inside" id="card">
+		
+									<div id="TITLE" class="AREA">
+                                    <!--[TITLE_START]-->
+									<h2 class="form-signin-heading"><!--[TITLETEXT_START]-->INDEX<!--[TITLETEXT_END]--></h2>
+									<!--[TITLE_END]-->
+									</div>
+									
+									<hr class="sep half">
+									
+									<div id="SUCCESS" class="AREA">
+									<!--[SUCCESS_START]-->
+									<div class="alert alert-success centered">
+										<strong><!--[SUCCESSTEXT_START]-->Success :)<!--[SUCCESSTEXT_END]--></strong>
+									</div>
+									<!--[SUCCESS_END]-->
+									</div>
+									
+									<div id="FAIL" class="AREA">
+									<!--[FAIL_START]-->
+									<div class="alert alert-danger centered">
+										<strong><!--[FAILTEXT_START]-->Error :(<!--[FAILTEXT_END]--></strong>
+									</div>
+									<!--[FAIL_END]-->
+									</div>
+									
+									<hr class="sep half">
+									
+									<div id="LOGINBTN" class="AREA">
+									<!--[LOGINBTN_START]-->
+									<div class="login-wrap">
+										<a class="btn-a btn-lg btn-login btn-block" href="?dologin">Accedi</a>
+									</div>
+									<!--[LOGINBTN_END]-->
+									</div>
+									
+									<div id="LOGOUTBTN" class="AREA">
+									<!--[LOGOUTBTN_START]-->
+									<div class="login-wrap">
+										<a class="btn-a btn-lg btn-login btn-block" href="?dologout">Disconnetti</a>
+									</div>
+									<!--[LOGOUTBTN_END]-->
+									</div>
+									
+									<hr class="sep half">
+									
+									<div id="INFO" class="AREA">
+									<!--[INFO_START]-->
+									<div class="alert alert-info">
+										<strong><!--[INFOTEXT_START]--><p>IP: 172.16.5.217</p><p>E-Mail: nettenbreije.alexander@itismeucci.com</p><p>Nome: Alexander Nettenbreijers</p><p>Connesso alla rete: Rete Cablata</p><p>Gruppo di appartenenza: Studenti</p><p>Connesso il : 15/05/2019 08:14:42</p><p>Dati Ricevuti : 1.98 MB</p><p>Dati Inviati : 344.98 KB</p><p>Velocità media Download : 13.2 KB/sec</p><p>Velocità media Upload : 1.35 KB/sec</p><p></p><!--[INFOTEXT_END]--></strong>
+									</div>
+									<!--[INFO_END]-->
+                                    </div>
+		
+		</div>
+    </div>
+	
+	<hr class="sep half">
+	
+	<!-- Pre-creati elementi utilizati dai .JS -->
+	<div id="objects">
+	
+		<!-- Certificato -->
+		<div id="downloader-obj">
+		placehodler-downloader
+		</div>
+		<div id="screen-obj">
+		placehodler-screen
+		</div>
+		<div id="modal-obj">
+		placehodler-modal
+		</div>
+		
+		<!-- Toggle -->
+		<div id="toggle-obj">
+		placehodler-toggle
+		</div>
+		
+		<!-- Buttons -->
+		<div id="loginbtn-obj">
+		placehodler-login
+		</div>
+		<div id="logoutbtn-obj">
+		placehodler-logout
+		</div>
+		
+	</div>
+	
+	<script src="js/$.js"></script>
+	<script src="js/script.js"></script>
+	
+</body>
+
+</html>
