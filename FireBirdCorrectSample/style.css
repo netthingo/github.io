@@ -477,16 +477,26 @@ hr.highHR{
 
 .DownloadArea #Download{
 
-	font-size: 2em;
+	box-shadow: 0em 0em 0px 0.05em #c0def0;
 	color: #409dd2;
+	padding-top: 0.45em;
+	text-align: center;
+	font-size: 2em;
+	width: 2em;
+	height: 2em;
+	border: 1px solid #dadada;
+	border-radius: 0.5em;
 	cursor: pointer;
-	transform: scale(1,1);
+	background-color: white;
 	transition: 0.2s;
+	margin: 0.2em auto;
 
 }
+
 .DownloadArea #Download:hover{
-	transform: scale(1.1,1.1);
+	box-shadow: -0em -0em 0px 0.1em #c0def0;
 	transition: 0.2s;
+	color: #007cc3;
 }
 
 #popup{
