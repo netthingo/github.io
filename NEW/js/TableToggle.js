@@ -23,7 +23,7 @@ async function close() {
 	deg -= 180;
 	
 	toggler[0].style.transform = "rotate("+ deg +"deg)";
-	for(var i = trs.length-(RowAmmountClosed-1); i > RowAmmountClosed-1; i--){
+	for(var i = trs.length-(RowAmmountClosed-2); i > RowAmmountClosed-1; i--){
 		trs[i].style.display = "none";
 		
   await sleep(sleepTime);
@@ -38,7 +38,7 @@ async function open() {
 	deg -= 180;
 	
 	toggler[0].style.transform = "rotate("+ deg +"deg)";
-	for(var i = RowAmmountClosed; i < trs.length-1; i++){
+	for(var i = RowAmmountClosed-1; i < trs.length; i++){
 		trs[i].style.display = "table-row";
   await sleep(sleepTime);
 	}
