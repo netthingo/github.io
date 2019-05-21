@@ -140,7 +140,7 @@ info_start = info_start.replace(/\<\!\-\-\[INFO_END\]\-\-\>/g, "");
 var patt = new RegExp("[a-zA-Z]");
 
 if( patt.test(info_start) ){
-	$("#INFO").before( $("<hr class='extraSmallHR'>") )
+	$("#INFO").before( $("<hr class='evenSmallerHR'>") )
 	$("#INFO").before( $("#TOGGLE-BTN") )
 }
 

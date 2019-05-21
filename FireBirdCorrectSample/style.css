@@ -34,7 +34,7 @@ body, html{
 	width: 100%;
 	height: 100%;
 
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .container{
@@ -77,6 +77,14 @@ hr.highHR{
 
 .card{
 	box-shadow: 0px 3px 5px -5px rgba(173,173,173,1);
+	border: 1px solid #dadada;
+	border-top: 0;
+	background-color: white;
+	position: absolute;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	box-shadow: 0px 5px 5px -2px rgba(217, 217, 217, 1);
+	border-radius: 6px;
 }
 
 .card::before {
@@ -97,6 +105,7 @@ hr.highHR{
 
 .card-text{
 	padding: 1.5em;
+	
 }
 
 .card-table{
@@ -171,14 +180,63 @@ hr.highHR{
 
 /* BUTTON  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.btn-edited{
-	padding: 0.8em 0.8em;
-	border: 0;
-	border-radius: .25rem;
+.btn-edited {
 	width: 100%;
-	text-align: left;
+	color: #202124;
+	color: #16161d;
+	background-color: white;
+	text-decoration: none;
+	display: block;
+	border: 1px solid #dadada;
+	border-radius: 10px;
+	border-bottom: 1px solid #929292;
+	cursor: pointer;
+	background-color: rgba(137, 188, 239, 0.1);
+	transition: 0.25s;
+	padding: 0.2em;
+	font-size: 1em;
 }
 
+.btn-edited:hover {
+	/* background-color: #dedeff; */
+	transition: 0.25s;
+	box-shadow: 0px 5px 5px -2px rgba(217, 217, 217, 1);
+	background-color: rgba(137, 188, 239, 0.3);
+}
+
+.btn-edited img {
+	position: relative;
+	height: 30px;
+	width: 30px;
+	transition: 1s;
+	left: 10px;
+	top: 2px;
+}
+
+.btn-edited .img {
+	height: 50px;
+	width: 50px;
+	border-right: 1px solid #929292;
+}
+
+.btn-edited span {
+	transition: 0.25s;
+	color: #202124;
+	margin-left: 15px;
+	font-size: 1em;
+}
+
+.btn-edited:hover span {
+	transition: 0.25s;
+	margin-left: 35px;
+}
+
+.btn-edited:hover img {
+	transition: 0.5s;
+	transform: rotate(360deg);
+}
+
+/*
 .btn-edited:focus{
 	outline: none;
 }
@@ -191,6 +249,7 @@ hr.highHR{
 	padding-bottom: 2px;
 	border-bottom: 1px solid rgba(255,255,255,0.3);
 	padding-right: 10px;
+	color: black;
 }
 
 .btn-edited:hover span{
@@ -200,12 +259,14 @@ hr.highHR{
 }
 
 .primary{
-	background-color: #409dd2;
-	border-color: #409dd2;
+	background-color: white;
+	border-color: #dadada;
+	color: black;
 }
 .primary:hover{
-	background-color: #007cc3;
-	border-color: #007cc3;
+	background-color: white;
+	border-color: #dadada;
+	color: black;
 }
 
 .success{
@@ -235,28 +296,23 @@ hr.highHR{
 	border-color: #f8c300;
 }
 
-.google:hover img{
-	transform: rotate(720deg);
-	transition: 0.5s;
-}
+*/
 
-.google img{
-	transform: rotate(360deg);
-	transition: 0.5s;
-	background-color: white;
-	border-radius: 50%;
-	padding: 0.1em;
-	height: 2.2em;
-	width: 2.2em;
+
+.google:focus{
+	outline: none;
 }
 
 .google:focus span,.google:focus img{
 	opacity: 0;
 }
 
-.google:focus{
+.google:focus, .google:focus img, .google:focus span, .google:focus td{
+	
+	box-shadow: 0px 3px 5px -5px transparent;
 	transition: 0.2s;
 	background-color: white;
+	border-color: white;
 }
 
 .google::after, .google::before{
@@ -283,7 +339,7 @@ hr.highHR{
 }
 
 .google::before{
-	transform: translate(-50%, 0.17em);
+	transform: translate(-50%, 1.175em);
 	z-index: 2;
 	width: 1.8em;
 	height: 1.8em;
@@ -312,22 +368,17 @@ hr.highHR{
 
 /* OTHER  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media (pointer:none), (pointer:coarse) {
-	.container{ max-width: 9999px;}
-	body, html #MODAL table{ font-size: 3em; } 
-}
+/* @media (pointer:none), (pointer:coarse) { */
+	/* .container{ } */
+	/* body, html #MODAL table{ font-size: 3em; }  */
+/* } */
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-	.container{ 
-		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-		width: -moz-max-content;    /* Firefox/Gecko */
-		width: -webkit-max-content; /* Chrome */
-		width: fit-content;
-		min-width: 500px; 
-	}
-	body, html #MODAL table{ font-size: 1.1em; } 
-}
+/* /* Large devices (desktops, 992px and up) */ */
+/* @media (min-width: 992px) {  */
+	/* .container{  */
+	/* } */
+	/* body, html #MODAL table{ font-size: 1.1em; }  */
+/* } */
 
 /* ANIMATION  =-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
