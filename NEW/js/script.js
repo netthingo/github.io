@@ -199,8 +199,8 @@ str = str.split('<!--[FAILTEXT_START]-->').pop().split('<!--[FAILTEXT_END]-->')[
 
 str = str.split("<br>");
 
-var firstTr = "<tr><td>" + str[0] + "</td><td>" + str[1] + "</td></tr>";
-var secondTr = "<tr><td>" + str[2].split(":")[0] + "</td><td>" + str[2].split(":")[1] + "</td></tr>";
+var firstTr = "<tr><td>" + str[0] + ":</td><td>" + str[1] + "</td></tr>";
+var secondTr = "<tr><td>" + str[2].split(":")[0] + ":</td><td>" + str[2].split(":")[1] + "</td></tr>";
 
 var table = "<table>" + firstTr + secondTr + "</table>"
 
