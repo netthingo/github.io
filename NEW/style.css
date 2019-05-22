@@ -607,6 +607,30 @@ body, html {
 	}
 }
 
+
+/*
+────────────────────────────────────────────────────────────┤♦│
+████████████████████████████████████████████████████████████│!│- ALERT
+────────────────────────────────────────────────────────────┤♦│
+*/
+
+.alert{
+	border-radius: 0 !important;
+	border: 0 !important;
+}
+
+.alert-danger{
+	color: rgba(238, 34, 34, 1) !important;
+	border-left: 3px dashed rgba(238, 34, 34, 1) !important;
+	border-right: 3px dashed rgba(238, 34, 34, 1) !important;
+}
+
+.alert-success{
+	color: rgba(64, 173, 111, 1) !important;
+	border-left: 3px dashed rgba(64, 173, 111, 1) !important;
+	border-right: 3px dashed rgba(64, 173, 111, 1) !important;
+}
+
 /*
 ────────────────────────────────────────────────────────────┤♦│
 ████████████████████████████████████████████████████████████│!│- OTHER
