@@ -7,6 +7,8 @@ var modal = document.getElementById("modal-obj");
 var screen = document.getElementById("screen-obj");
 var x = document.getElementById("MODAL_CLOSE");
 
+var isModalOpen = false;
+
 text.forEach(function(x) {
   x.append( document.createTextNode(getOS()) );
 });
@@ -39,13 +41,13 @@ screen.style.display = "block";
 modal.style.display = "block";
 
 function showModal(){
-
+	isModalOpen = true;
     body.style.filter = "blur(5px)";
     ModalOpen();
 }
 
 function closeModal(){
-
+	isModalOpen = false;
     body.style.filter = "blur(0px)";
     ModalClose();
 }

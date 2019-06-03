@@ -90,7 +90,8 @@
 				<div id="Download" onclick="alert('Error: nessun certificato assegnato.')"><i class="fas fa-download"></i></div> 
 				<div class="text"><span >Certificato per </span> <span class="OS"></span> </div>
 				<hr>
-				<div id="popup"><span>Non hai <span class="OS"></span>?</span></div>
+				<div class="popup" id="popup"><span>Non hai <span class="OS"></span>?</span></div>
+				<div class="popup" id="tutorial_link"><span>Non sai come installare il certificato?</div>
 			</div>
 		</div>
 		
@@ -101,8 +102,18 @@
             <table>
                     <tr class="head"><th></th><th>File name</th><th>OS</th></tr>
                     <tr><th> <a href="cert.der"><i class="fas fa-download"></i></a></th><td>cert.der</td><td>windows </td></tr>
-                    <tr><th> <a href="cert.pem"><i class="fas fa-download"></i></a></th><td>cert.pem</td><td>andorid </td></tr>
+                    <tr><th> <a href="cert.pem"><i class="fas fa-download"></i></a></th><td>cert.pem</td><td>android </td></tr>
             </table>
+			<hr class="sep one">
+			<hr>
+			<hr class="sep one">
+			<h2 id="tutorials-title">Tutorials:</h2>
+			<hr class="sep half">
+			<ul id="tutorials">
+			  <li onclick="windows_appear()"><span>Windows</span></li>
+			  <li onclick="android_appear()"><span>Android</span></li>
+			  <li onclick="ios_appear()"><span>IOS</span></li>
+			</ul>
 		</div>
 		
 		<!-- Toggle -->
@@ -132,14 +143,47 @@
 					</button>
 		</div>
 		
+		<!-- Tutorials -->
+		
+		<div id="dark-screen-obj"></div>
+		
+		<!-- Windows -->
+		<div id="windows-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">Windows</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<span>text</span>
+		</div>
+		
+		<!-- Android -->
+		<div id="android-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">Android</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<span>text</span>
+		</div>
+		
+		<!-- IOS -->
+		<div id="ios-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">IOS</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<span>text</span>
+		</div>
+		
 	</div>
 	
-	<img src="resources/logo.png" class="background-logo" alt="Logo ITIS Meucci">
+	
+    <img src="resources/logo.png" class="background-logo" alt="Logo ITIS Meucci">
 	<script src="js/$.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/TableToggle.js"></script>
 	<script src="js/getOS.js"></script>
 	<script src="js/cert.js"></script>
+	<script src="js/tutorial.js"></script>
 	
 </body>
 

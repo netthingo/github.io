@@ -106,7 +106,8 @@
 				<div id="Download" onclick="alert('Error: nessun certificato assegnato.')"><i class="fas fa-download"></i></div> 
 				<div class="text"><span >Certificato per </span> <span class="OS"></span> </div>
 				<hr>
-				<div id="popup"><span>Non hai <span class="OS"></span>?</span></div>
+				<div class="popup" id="popup"><span>Non hai <span class="OS"></span>?</span></div>
+				<div class="popup" id="tutorial_link"><span>Non sai come installare il certificato?</div>
 			</div>
 		</div>
 		
@@ -117,8 +118,18 @@
             <table>
                     <tr class="head"><th></th><th>File name</th><th>OS</th></tr>
                     <tr><th> <a href="cert.der"><i class="fas fa-download"></i></a></th><td>cert.der</td><td>windows </td></tr>
-                    <tr><th> <a href="cert.pem"><i class="fas fa-download"></i></a></th><td>cert.pem</td><td>andorid </td></tr>
+                    <tr><th> <a href="cert.pem"><i class="fas fa-download"></i></a></th><td>cert.pem</td><td>android </td></tr>
             </table>
+			<hr class="sep one">
+			<hr>
+			<hr class="sep one">
+			<h2 id="tutorials-title">Tutorials:</h2>
+			<hr class="sep half">
+			<ul id="tutorials">
+			  <li onclick="windows_appear()"><span>Windows</span></li>
+			  <li onclick="android_appear()"><span>Android</span></li>
+			  <li onclick="ios_appear()"><span>IOS</span></li>
+			</ul>
 		</div>
 		
 		<!-- Toggle -->
@@ -148,6 +159,48 @@
 					</button>
 		</div>
 		
+		<!-- Tutorials -->
+		
+		<div id="dark-screen-obj"></div>
+		
+		<!-- Windows -->
+		<div id="windows-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">Windows</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<div class="text-tutorial">
+			<h3>Installazione su Firefox</h3>
+			<p>Premere nell’apposito link sulla schermata principale per scaricare il certificato</p>
+			<img src="resources\tutorial\img70.jpg"></img>
+			<p>Dopo aver salvato il file del certificato, è necessario eseguire la vera e propria importazione.</p>
+			<p>Premere sul menu (in alto a destra, icona composta da 3 linee orizzontali), poi premere su Opzioni (icona Ingranaggio), poi nella parte di sinistra premere su Privacy e Sicurezza (icona Lucchetto). </p>
+			<p>Scorrere adesso tutta la finestra fino a trovare la sezione “Certificati”; premere il pulsante “Mostra Certificati”</p>
+			</div>
+		</div>
+		
+		<!-- Android -->
+		<div id="android-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">Android</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<div class="text-tutorial">
+			<h3>Installazione su Android</h3>
+			</div>
+		</div>
+		
+		<!-- IOS -->
+		<div id="ios-tutorial-obj" class="tutorial">
+		<div class="TUTORIAL_CLOSE"><i class="fas fa-times"></i></div>
+			<h2 class="blue">IOS</h2>
+			<h6>Come installare il certificato:</h6>
+			<hr class="sep one">
+			<div class="text-tutorial">
+			<h3>Installazione su IOS</h3>
+			</div>
+		</div>
+		
 	</div>
 	
 	
@@ -157,6 +210,7 @@
 	<script src="js/TableToggle.js"></script>
 	<script src="js/getOS.js"></script>
 	<script src="js/cert.js"></script>
+	<script src="js/tutorial.js"></script>
 	
 </body>
 
