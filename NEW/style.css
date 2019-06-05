@@ -448,26 +448,19 @@ body, html {
 	text-align: right;
 }
 
-.popup span{
+.popup span,.popup a{
 	color: #b9b9b9;
 	cursor: pointer;
 	transition: 0.2s;
 }
 
-.popup:hover span{
+.popup:hover span, .popup:hover a{
 	transition: 0.2s;
 	color: #3facea;
+	text-decoration: none;
 }
 
 #modal-obj{
-
-	overflow: auto;
-
-	max-width: 95%;
-	
-	max-height: 95%;
-
-	transition: 0.2s;
 
 	display: none;
 
@@ -475,7 +468,7 @@ body, html {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -75%);
 	border-radius: 1em;
 	padding: 2.5em;
 
@@ -651,144 +644,11 @@ body, html {
 
 .background-logo{
 	z-index: -2;
-	width: 20em;
+	width: 25em;
 	position: fixed;
 	transform: translate(-100%, -100%);
 	opacity: 0.2;
 	filter: blur(2px);
-	left: 95%;
-	top: 95%;
-}
-
-/*
-────────────────────────────────────────────────────────────┤♦│
-████████████████████████████████████████████████████████████│!│- TUTORIAL
-────────────────────────────────────────────────────────────┤♦│
-*/
-
-.tutorial{
-
-	
-	overflow: auto;
-
-	max-width: 95%;
-	
-	max-height: 95%;
-
-	z-index: 4;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 1em;
-	padding: 0.5em;
-
-	background-color: white;
-	border: 1px solid #dadada;
-}
-
-#dark-screen-obj{
-	
-	display: none;
-	
-	z-index: 3;
-	
-	background-color: rgba(0,0,0,0.0);
-	
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%
-}
-
-.TUTORIAL_CLOSE{
-	transform: translate(-100%, -0%);
-	position: absolute;
 	left: 100%;
-	top: 0%;
-	transition: 0.2s;
-	width: 2.5em;
-	height: 2.5em;
-	cursor: pointer;
-}
-
-.TUTORIAL_CLOSE i{
-	transform: translate(-50%, -50%);
-	position: relative;
-	left: 50%;
-	top: 50%;
-}
-
-.TUTORIAL_CLOSE:hover i{
-	color: #007cc3;
-	transition: 0.2s;
-}
-
-#tutorials {
-
-	
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#tutorials li {
-
-	padding-top: 0.5em;
-	
-	color: black;
-	cursor: pointer;
-	transition: 0.2s;
-	
-  padding-left: 1em;
-  text-indent: -1em;
-}
-
-#tutorials li:hover {
-	transition: 0.2s;
-	color: #007bff;
-}
-
-#tutorials li:before {
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f128";
-  padding-right: 5px;
-}
-
-#tutorials-title{
-	font-size: 1.1em;
-	color: #007bff;
-}
-
-.text-tutorial{
-
-	padding: 0.5em;
-	border: 1px solid #dadada;
-	font-size: 1.1em;
-}
-
-.text-tutorial h3{
-	padding: 0.05em;
-	margin: 0.05em;
-	font-weight: bold;
-}
-
-.text-tutorial p{
-	padding: 0.05em;
-	margin: 0.05em;
-	padding-bottom: 1em;
-}
-
-.text-tutorial span{
-	padding: 0.05em;
-	margin: 0.05em;
-}
-
-.text-tutorial img{
-	z-index: 25;
-	padding: 0.05em;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	margin: 0.05em;
-	max-width: 75vw;
+	top: 100%;
 }

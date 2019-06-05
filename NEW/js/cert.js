@@ -1,3 +1,4 @@
+var tutorial = document.getElementById("Tutorial");
 var link = document.getElementById("Download");
 var popup = document.getElementById("popup");
 var body = document.querySelectorAll("BODY")[0];
@@ -7,8 +8,6 @@ var modal = document.getElementById("modal-obj");
 var screen = document.getElementById("screen-obj");
 var x = document.getElementById("MODAL_CLOSE");
 
-var isModalOpen = false;
-
 text.forEach(function(x) {
   x.append( document.createTextNode(getOS()) );
 });
@@ -16,9 +15,11 @@ text.forEach(function(x) {
 switch(getOS()){
     case "Windows":
     link.onclick = certDotDer;
+	tutorial.href = "tutorials/windows.html"
     break;
     case "Android":
     link.onclick = certDotPem;
+	tutorial.href = "tutorials/android.html"
     break;
     default:
     break;
@@ -41,13 +42,13 @@ screen.style.display = "block";
 modal.style.display = "block";
 
 function showModal(){
-	isModalOpen = true;
+
     body.style.filter = "blur(5px)";
     ModalOpen();
 }
 
 function closeModal(){
-	isModalOpen = false;
+
     body.style.filter = "blur(0px)";
     ModalClose();
 }
