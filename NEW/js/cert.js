@@ -21,6 +21,10 @@ switch(getOS()){
     link.onclick = certDotPem;
 	tutorial.href = "tutorials/android.html"
     break;
+	case "iOS":
+    link.onclick = certDotPem;
+	tutorial.href = "tutorials/android.html"
+	break;
     default:
     break;
 }
