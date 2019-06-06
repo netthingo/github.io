@@ -1,0 +1,27 @@
+.page{
+	text-align: center;
+	padding: 2em 0em;
+}
+
+nav{
+	border-bottom: 5px solid #eaeaea;
+}
+
+img{
+	width: 15em;
+	outline: 5px solid #eaeaea;
+}
+
+p{
+	background-color: #f2f2f2;
+	padding: 0em 1em;
+}
+
+p.note{
+	background-color: white;
+	color: #dadada;
+}
+
+h2{
+	color: #3facea;
+}
