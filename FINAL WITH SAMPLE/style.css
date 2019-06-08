@@ -473,7 +473,6 @@ width: fit-content;
 	width: 1.75em;
 	height: 1.75em;
 	cursor: pointer;
-	border-radius: 50%;
 	background-color: white;
 	transition: 0.2s;
 	margin: 0.2em auto;
@@ -483,7 +482,6 @@ width: fit-content;
 .DownloadArea #Download:hover{
 	
 	transform: rotate(0.1deg);
-	box-shadow: -0em -0em 0px 0.1em #c0def0;
 	transition: 0.2s;
 	color: #3facea;
 }
@@ -689,11 +687,12 @@ width: fit-content;
 
 .background-logo{
 	z-index: -2;
-	width: 25em;
+	width: 20em;
 	position: fixed;
 	transform: translate(-100%, -100%);
 	opacity: 0.2;
-	filter: blur(2px);
+	filter: blur(1px);
 	left: 100%;
 	top: 100%;
+	padding: 2em;
 }
