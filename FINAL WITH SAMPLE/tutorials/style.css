@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: URL('../resources/font/Ubuntu-Regular.ttf') format('truetype');
+}
+
+*{
+	font-family: Ubuntu;
+}
+
 .page{
 	text-align: center;
 	padding: 2em 0em;
@@ -8,20 +17,35 @@ nav{
 }
 
 img{
-	width: 15em;
+	width: 17em;
 	outline: 5px solid #eaeaea;
+	max-width: 90%;
 }
 
 p{
-	background-color: #f2f2f2;
 	padding: 0em 1em;
 }
 
 p.note{
-	background-color: white;
-	color: #dadada;
+	color: #d5d5d5 !important;
 }
 
 h2{
 	color: #3facea;
+}
+
+
+.sep{
+	font-size: 1.2em;
+	padding: 2em;
+}
+
+.sep:nth-child(even){
+	color: #3a3a3f;
+	background-color: #f5f8fa;
+}
+
+.sep:nth-child(odd){
+	color: #3a3a3f;
+	background-color: white;
 }
