@@ -465,17 +465,19 @@ width: fit-content;
 
 .DownloadArea #Download{
 
-	transform: rotate(-25deg);
+	transform: rotate(-15deg);
 	color: #93d0f3;
 	text-align: center;
 	padding-top: 0.14em;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	width: 1.75em;
 	height: 1.75em;
 	cursor: pointer;
-	background-color: white;
+	background-color: transparent;
 	transition: 0.2s;
-	margin: 0.2em auto;
+	margin: 0em auto;
+	position:relative;
+	top: 0.2em;
 
 }
 
@@ -491,7 +493,7 @@ width: fit-content;
 }
 
 .popup span,.popup a{
-	color: #b9b9b9;
+	color: #777777;
 	cursor: pointer;
 	transition: 0.2s;
 }
