@@ -48,3 +48,11 @@ h2{
 	color: #3a3a3f;
 	background-color: white;
 }
+
+.blue{
+	color: #3facea !important;
+}
+
+.blue:hover{
+	color: #2f9cda !important;
+}
