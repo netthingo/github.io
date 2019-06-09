@@ -17,9 +17,8 @@ nav{
 }
 
 img{
-	width: 17em;
 	outline: 5px solid #eaeaea;
-	max-width: 90%;
+	max-width: 100%;
 }
 
 p{
