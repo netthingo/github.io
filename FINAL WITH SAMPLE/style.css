@@ -291,7 +291,7 @@ width: fit-content;
 	text-decoration: none;
 	display: block;
 	border: 1px solid #dadada;
-	border-radius: 10px;
+	border-radius: 5px;
 	border-bottom: 1px solid #929292;
 	cursor: pointer;
 	transition: 0.25s;
