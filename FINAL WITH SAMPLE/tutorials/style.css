@@ -13,7 +13,7 @@
 }
 
 nav{
-	border-bottom: 5px solid #eaeaea;
+	border-bottom: 5px solid #d1dadf;
 }
 
 img{
@@ -31,6 +31,7 @@ p.note{
 
 h2{
 	color: #3facea;
+	padding-bottom: 0.8em;
 }
 
 
@@ -41,7 +42,7 @@ h2{
 
 .sep:nth-child(even){
 	color: #3a3a3f;
-	background-color: #f5f8fa;
+	background-color: #f1faff;
 }
 
 .sep:nth-child(odd){
@@ -55,4 +56,8 @@ h2{
 
 .blue:hover{
 	color: #2f9cda !important;
+}
+
+.alert{
+	 margin: 0 !Important;
 }
